@@ -1,0 +1,9 @@
+CREATE TYPE TEST_OBJ AS (
+    strings TEXT[]
+);
+
+CREATE TABLE data (
+    obj TEST_OBJ
+);
+
+INSERT INTO data VALUES(ROW(ARRAY['STR0', 'STR1', 'STR2', 'STR3'])::TEST_OBJ);
